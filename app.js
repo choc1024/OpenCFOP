@@ -34,3 +34,5 @@ const savedView = localStorage.getItem("opencfop:view");
 if (savedView) {
     switchView(savedView);
 }
+
+
