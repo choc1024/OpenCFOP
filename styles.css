@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    color: white;
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: #0d0f14;
+}
+
+.sidebar {
+    width: 220px;
+    background: #151922;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #303c5a;
+}
+
+.main {border: 1px solid #303c5a;
+    flex: 1;
+    background: #151922;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #303c5a;
+}
