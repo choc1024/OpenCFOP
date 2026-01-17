@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>OpenCFOP</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>OpenCFOP</h1>
+        </div>
+
+        <div class="sidebar-nav">
+            <button class="sidebar-button active" data-view="overview">Overview</button>
+            <button class="sidebar-button" data-view="timer">Timer</button>
+            <button class="sidebar-button" data-view="practice">Practice</button>
+            <button class="sidebar-button" data-view="learn">Learn</button>
+            <button class="sidebar-button" data-view="analyze">Analyze</button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="view active" id="view-overview">
+            <h2>Overview</h2>
+            <p>Dashboard goes here.</p>
+        </div>
+
+        <div class="view" id="view-timer">
+            <h2>Timer</h2>
+            <div class="timer-container">
+                <div id="timer-display">0.00</div>
+            </div>
+            <div class="table-card">
+                <div class="card-header">
+                    <span style="margin: auto;">Session</span>
+                    <div class="separator"></div>
+                    <div class="counter">
+                        <button class="btn minus">-</button>
+                        <span class="value">0</span>
+                        <button class="btn plus">+</button>
+                    </div>
+
+                </div>
+
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Column A</th>
+                                <th>Column B</th>
+                                <th>Column C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1</td>
+                                <td>Data</td>
+                                <td>More</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2</td>
+                                <td>Data</td>
+                                <td>More</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3</td>
+                                <td>Data</td>
+                                <td>More</td>
+                            </tr>
+                            <!-- etc -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view" id="view-practice">
+            <h2>Practice</h2>
+        </div>
+
+        <div class="view" id="view-learn">
+            <h2>Learn</h2>
+        </div>
+
+        <div class="view" id="view-analyze">
+            <h2>Analyze</h2>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+    <script src="timer.js"></script>
+</body>
+
+</html>

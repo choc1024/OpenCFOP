@@ -10,43 +10,16 @@
 
 <body>
     <div class="sidebar">
-        <div class="sidebar-header">
-            <h1>OpenCFOP</h1>
-        </div>
-
-        <div class="sidebar-nav">
-            <button class="sidebar-button active" data-view="overview">Overview</button>
-            <button class="sidebar-button" data-view="timer">Timer</button>
-            <button class="sidebar-button" data-view="practice">Practice</button>
-            <button class="sidebar-button" data-view="learn">Learn</button>
-            <button class="sidebar-button" data-view="analyze">Analyze</button>
-        </div>
+        <button class="sidebar-btn">Dashboard</button>
+        <button class="sidebar-btn">Timer</button>
+        <button class="sidebar-btn">Learn</button>
+        <button class="sidebar-btn">Practice</button>
+        <button class="sidebar-btn">Analyze</button>
     </div>
-
     <div class="main">
-        <div class="view active" id="view-overview">
-            <h2>Overview</h2>
-            <p>Dashboard goes here.</p>
-        </div>
-
-        <div class="view" id="view-timer">
-            <h2>Timer</h2>
-            <p>Timer UI goes here.</p>
-        </div>
-
-        <div class="view" id="view-practice">
-            <h2>Practice</h2>
-        </div>
-
-        <div class="view" id="view-learn">
-            <h2>Learn</h2>
-        </div>
-
-        <div class="view" id="view-analyze">
-            <h2>Analyze</h2>
-        </div>
+        <iframe class="main-display" id="page-container"></iframe>
     </div>
-    <script src="app.js"></script>
+    <script src="sidebar.js"></script>
 </body>
 
 </html>

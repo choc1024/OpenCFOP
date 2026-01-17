@@ -1,0 +1,187 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    color: white;
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: #0d0f14;
+}
+
+.separator {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    width: 220px;
+    background: #151922;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #303c5a;
+}
+
+.sidebar-header {
+    margin-bottom: 16px;
+}
+
+.sidebar-header h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar-button {
+    background: transparent;
+    border: none;
+    color: #9aa0b3;
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-button:hover {
+    background: #1b2030;
+    color: #e6e8ee;
+}
+
+.sidebar-button.active {
+    background: #1b2030;
+    color: #5eead4;
+}
+
+
+.main {border: 1px solid #303c5a;
+    flex: 1;
+    background: #151922;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #303c5a;
+}
+
+.view {
+  display: none;
+  height: 100%;
+}
+
+.view.active {
+  display: block;
+}
+
+
+.timer-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#timer-display {
+  font-size: clamp(64px, 12vw, 160px);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  color: #e6e8ee;
+}
+
+.table-card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  overflow: hidden; /* ensures rounded corners apply to inner content */
+  border: 1px solid #303c5a;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  background: #0d0f14;
+  border-bottom: 1px solid #ddd;
+  color: white;
+}
+
+.card-header {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid #303c5a;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.counter button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: #8794ce;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.value {
+  min-width: 24px;
+  text-align: center;
+}
+
+
+
+/* Scrollable table area */
+.card-body {
+  max-height: 250px; /* adjust as needed */
+  overflow-y: auto;
+  background: white;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
