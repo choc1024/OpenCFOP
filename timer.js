@@ -12,27 +12,26 @@ let spaceHeld = false;
 
 let inspecting = false
 
+
+let holdTimeout = null;
+
 document.addEventListener("keydown", (e) => {
     if (e.code === "Space" && !spaceHeld) {
+        e.preventDefault();
         spaceHeld = true;
         spaceDownTime = performance.now();
-        setTimeout(() => {
-            timer.style.color = "green"
-        }, 1000);
 
+        holdTimeout = setTimeout(() => {
+            timer.style.color = "green";
+        }, 1000);
     }
 });
 
 document.addEventListener("keyup", (e) => {
     if (e.code === "Space") {
-        const heldTime = performance.now() - spaceDownTime;
+        clearTimeout(holdTimeout);
+        holdTimeout = null;
         spaceHeld = false;
-
-        if (heldTime >= 1000) {
-            if (timer_settings.wca_inspection === true && inspecting === false) {
-                inspecting = true
-
-            }
-        }
+        timer.style.color = "white";
     }
 });
