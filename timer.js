@@ -1,4 +1,5 @@
 const main_page = window.parent
+console.log("timer.js running on:", window.location.pathname);
 
 const timer_settings = main_page.get_data("settings").timer
 
