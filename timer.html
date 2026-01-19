@@ -12,6 +12,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 12vh;
         }
 
         .timer-text {
@@ -20,11 +21,134 @@
             font-family: monospace;
 
         }
+
+
+        .table-card {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 16px;
+            overflow: hidden;
+            /* ensures rounded corners apply to inner content */
+            border: 1px solid #303c5a;
+            display: flex;
+            flex-direction: column;
+            font-family: system-ui, -apple-system;
+            background-color: #151922;
+        }
+
+        /* Header */
+        .card-header {
+            display: flex;
+            background-color: #0d0f14;
+            border-bottom: 1px solid #242b3d;
+            flex: 1;
+            padding: 12px;
+            color: white;
+        }
+
+        /* Scrollable table area */
+        .card-body {
+            height: 250px;
+            overflow-y: auto;
+            /* adjust as needed */
+            overflow-y: auto;
+            background: #151922;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            position: sticky;
+            top: 0;
+            background: #2c3547;
+            z-index: 1;
+            color: white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #0e0e0e;
+            text-align: left;
+            background: #151922;
+            color: white;
+        }
+
+        .session-selector {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid #303c5a;
+            border-radius: 6px;
+            overflow: hidden;
+            /* IMPORTANT */
+            margin: auto;
+        }
+
+        .session-selector button {
+            background-color: #333c50;
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .session-selector button:hover {
+            background-color: #3e4860;
+        }
+
+        .session-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 32px;
+            background-color: #151922;
+            color: white;
+            font-weight: 500;
+            border-left: 1px solid #242b3d;
+            border-right: 1px solid #242b3d;
+        }
     </style>
 </head>
 
 <body>
     <div class="timer-container"><span class="timer-text">0.00</span></div>
+
+    <div class="table-card">
+        <div class="card-header">
+            <span style="margin: auto;">Session: </span>
+            <div class="session-selector">
+                <button class="session-buttons-l">+</button>
+                <span class="session-number">0</span>
+                <button class="session-buttons-r">-</button>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>ao5</th>
+                        <th>ao12</th>
+                        <th>DNF</th>
+                        <th>+2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="timer.js"></script>
+
 </body>
 
 </html>
