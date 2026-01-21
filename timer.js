@@ -3,6 +3,7 @@ console.log("timer.js running on:", window.location.pathname);
 
 const timer_settings = main_page.get_data("settings").timer
 
+
 console.log(timer_settings)
 
 

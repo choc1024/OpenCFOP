@@ -1,7 +1,9 @@
 if (localStorage.getItem("first-time") == null) {
     const times_preset = {
         sessions: {
-
+            session_1: [
+                
+            ]
         }
     };
 

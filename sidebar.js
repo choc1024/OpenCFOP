@@ -11,8 +11,7 @@ let page_container = document.getElementById("page-container")
 
 page_container.src = current_page + ".html"
 setActive(current_page);
-
-
+page_container.focus();
 
 sidebar_buttons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -52,5 +51,5 @@ function set_page(page) {
 
     const newUrl = `${window.location.pathname}?${params.toString()}`;
     history.pushState({}, "", newUrl);
-
+    page_container.focus();
 }
